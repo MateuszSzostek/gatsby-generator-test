@@ -8,26 +8,22 @@ import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import L from "leaflet";
+//import iconUrl from "../assets/vector/marker.svg";
+//const myIcon = new L.Icon({
+// iconUrl: "static/marker.svg",
+//  iconAnchor: [5, 55],
+// popupAnchor: [10, -44],
+// iconSize: [25, 55],
+//});
 
-import iconUrl from "../assets/vector/marker.svg";
-const myIcon = new L.Icon({
-  iconUrl: "static/marker.svg",
-  iconAnchor: [5, 55],
-  popupAnchor: [10, -44],
-  iconSize: [25, 55],
-});
-
-const iconMarker = new L.Icon({
-  iconUrl: require("../assets/vector/marker.svg"),
-  iconRetinaUrl: require("../assets/vector/marker.svg"),
-  iconSize: new L.Point(60, 75),
-});
+//const iconMarker = new L.Icon({
+//  iconUrl: require("../assets/vector/marker.svg"),
+//  iconRetinaUrl: require("../assets/vector/marker.svg"),
+//  iconSize: new L.Point(60, 75),
+//});
 
 const Event = ({ pageContext }) => {
   console.log(pageContext);
-  console.log(iconUrl);
-  console.log(myIcon);
 
   const eventDate =
     pageContext?.node?.eventDate && new Date(pageContext?.node?.eventDate);
@@ -210,7 +206,6 @@ const Event = ({ pageContext }) => {
                     pageContext?.node?.placeOfEvent?.lat,
                     pageContext?.node?.placeOfEvent?.lon,
                   ]}
-                  icon={myIcon}
                 >
                   <Popup>
                     Miejesce spotkania <br /> Spotkamy sie tutaj!

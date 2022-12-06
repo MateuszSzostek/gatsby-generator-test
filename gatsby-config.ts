@@ -16,12 +16,17 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: "gatsby-plugin-react-leaflet",
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: {
         accessToken:
           process.env.GATSBY_CONTENTFUL_CONTENT_DELIVERY_ACCESS_TOKEN,
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
-        useNameForId: false,
       },
     },
     {
