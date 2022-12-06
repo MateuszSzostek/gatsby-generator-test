@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
         accessToken:
           process.env.GATSBY_CONTENTFUL_CONTENT_DELIVERY_ACCESS_TOKEN,
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        useNameForId: false,
       },
     },
     {
