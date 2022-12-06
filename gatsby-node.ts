@@ -6,7 +6,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const eventTemplate = path.resolve("./src/templates/event.tsx");
 
   const events = await graphql(`
-    query MyQuery {
+    query EventsQuery {
       allContentfulEvent {
         edges {
           node {
